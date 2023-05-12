@@ -7,9 +7,8 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
-<body>
 
-<!--This is the Navbar-->>
+<!--This is the Navbar-->
     <nav>
         <h2><img src="imgs/MTA_NYC_logo.svg.png" class="Logo" alt="MTA Logo" width="32" height="30"></h2>
         <ul>
@@ -17,5 +16,38 @@
             <li><a href="About.html">About</a></li>
         </ul>
     </nav>
-    <center><h1><u>Feedback Forum</u></h1></center>
+
+    <center><h1><u>Feedback Form</u></h1></center>
 </body>
+   <br>
+   <br>
+   <br>
+   <body>
+      <H2>Please Fill out this form</H2>
+      <br>
+      <br>
+      <FORM action="mailto:xvega504@gmail.com" method="post" enctype="text/plain">
+        <p> Full Name: </p> <INPUT type="text" name="firstname" placeholder="Enter name here">
+        <BR>
+        <BR>
+        <p>Email</p> <INPUT type="email" name="mail" placeholder="E-mail address">
+        <BR>
+        <BR>
+          <p>Comment: </p>
+          <TEXTAREA rows="6" cols="50" name="commentfield">Please Type Here</TEXTAREA> 
+          <br>
+          <br>
+          <p>Categorize Your Issue</p>
+          <SELECT name="countychooser">
+            <OPTION value="None">None</OPTION>
+            <OPTION value="UI">User Input</OPTION>
+            <OPTION value="UX">User Experience</OPTION>
+            <OPTION value="Comments/Feedback">Comments</OPTION>
+            <OPTION value="Concerns">Concerns</OPTION>
+          </SELECT>
+          <BR>
+          <BR>
+          <INPUT TYPE="submit" value="Send Feedback">
+          <INPUT TYPE="reset" value="Reset">
+      </FORM>
+    </body> 

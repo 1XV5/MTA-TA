@@ -34,3 +34,9 @@ nav ul li a{
 h1{ 
     padding-top: 3%;
 }
+
+p{ 
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration-color: blue;
+    text-decoration:  underline;
+}
