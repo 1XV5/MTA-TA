@@ -1,22 +1,56 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MTA Community Project</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Search Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        pre {
+            white-space: pre-wrap;       /* Since CSS 2.1 */
+            white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+        }
+    </style>
 </head>
-
 <body>
-<!--This is the Navbar-->
-    <nav>
-        <h2><img src="imgs/MTA_NYC_logo.svg.png" class="Logo" alt="MTA Logo" width="32" height="30"></h2>
-        <ul>
-            <li><a href="About.html">About</a></li>
-            <li><a href="feedback.html">Feedback</a></li>
-        </ul>
-    </nav>
-    <center><h1><u>Home Page</u></h1></center>
-</body>
+    <button id="searchButton">Search</button>
+    <pre id="result"></pre>
 
+    <script>
+        const data = [
+            `stop_time_update {
+                arrival {
+                    time: 1683911201
+                }
+                departure {
+                    time: 1683911201
+                }
+                stop_id: "614N"
+            }`,
+            `stop_time_update {
+                arrival {
+                    time: 1683911321
+                }
+                departure {
+                    time: 1683911321
+                }
+                stop_id: "613N"
+            }`,
+            `stop_time_update {
+                arrival {
+                    time: 1683911411
+                }
+                departure {
+                    time: 1683911411
+                }
+                stop_id: "612N"
+            }`
+        ];
+
+        $("#searchButton").click(function() {
+            $("#result").text(data.join("\n\n"));
+        });
+    </script>
+</body>
 </html>
